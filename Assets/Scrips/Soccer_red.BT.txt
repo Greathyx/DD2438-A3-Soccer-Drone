@@ -1,0 +1,19 @@
+tree("Root")
+	tree("Soccer")
+
+tree("Soccer")
+    fallback
+        sequence
+            IsGoalie_red
+            Defend_red
+        sequence
+            IsChaser_red
+            tree("Chaser")
+        ChaseEnemy_red
+
+tree("Chaser")
+    fallback
+        sequence
+            HasControlledBall_red
+            Dribble_red
+        ChaseBall_red
